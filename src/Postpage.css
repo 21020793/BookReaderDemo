@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.wrapper{
+    width: 100%;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    background-color: snow;
+}
+
+.BookInfo{
+    margin-top: 20px;
+    position: relative;
+}
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.DetailsContainer{
+    width: 100%;
+    /* background: #451184; */
+    background: rgb(29, 86, 29) ;
+    display: inline-block;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.BookContent{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.AnisContent{
+    position: relative;
+    padding: 60px 0;
+}
+
+.Cover{
+    width: 180px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+}
+
+.BookPoster{
+    border-radius: 10px;
+    border: 3px solid #fff;
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 148%;
+    position: relative;
+    overflow: hidden;
+    background: #eee;
+}
+
+.BookPoster img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.BookDetails{
+    padding-left: 210px;
+    padding-right: calc(33.33% + 40px);
+    min-height: 300px;
+    color: #fff;
+}
+
+.BookName{
+    margin-top: 0;
+    font-size: 28px;
+    line-height: 1.3em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.ReadNow{
+    margin-bottom: 2rem;
+}
+
+.ReadNow a{
+    padding: 0 1rem;
+    line-height: 42px;
+    border-radius: .4rem;
+}
+
+.btn-primary, .btn-tab.active {
+    background: #ffd702!important;
+    color: #111!important;
+    border-color: #ffd702!important;
+}
+.btn, button {
+    font-weight: 500;
+    font-size: 16px;
+    padding: .5rem .8rem;
+    box-shadow: none!important;
+    outline: 0!important;
+    border: none!important;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+}
+
+.BookMark{
+    display: inline-block;
+    position: relative;
+}
+
+.btn-fav {
+    padding: 0;
+    width: 22px;
+    margin-left: 10px;
+    background: #fff!important;
+}
+
+.BookMark .btn{
+    padding: 0 1rem;
+    line-height: 42px;
+    border-radius: .4rem;
+}
+
+.btn-light {
+    background: #fff;
+    border-color: #fff;
+    color: #221f1f!important;
+}
+
+.BookDesc{
+    text-align: left;
+    margin-top: 2rem;
+    font-size: 14px;
+}
+
+.Genres{
+    margin-bottom: .75rem;
+}
+
+.GenreElement{
+    display: inline-block;
+    margin: 0 4px 6px 0;
+    font-size: .85em;
+    padding: .25rem .5rem;
+    background: rgb(88, 168, 88);
+    color: #fff;
+    border-radius: .3rem;
+}
+
+.ReadMore{
+    background: rgb(88, 168, 88);
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: .4rem;
+}
+
+.StatusContainer{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    width: calc(33.33% - 20px);
+    overflow: hidden;
+    text-align: left;
+}
+
+.StatusInfo{
+    position: absolute;
+    top: 0;
+    max-height: 95%;
+    overflow: auto;
+    left: 0;
+    bottom: auto;
+    right: 0;
+    padding-bottom: 170px;
+}
+
+.ChapterWrapper{
+    padding-bottom: 70px;
+    min-height: calc(100vh - 0px);
+    display: block;
+}
+
+.ChapterContainer{
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.mw-2col{
+    margin: 0 0 30px;
+}
+
+.MainContent{
+    width: calc(66.66% - 20px);
+    float: left;
+    margin: 0 10px 40px 0;
+}
+
+.ChapterListContainer{
+    overflow: hidden;
+    display: block;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.HeaderArea{
+    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+    position: relative;
+    color: #111;
+}
+
+.HeaderArea .ListC{
+    border-bottom: 2px solid blueviolet;
+    font-size: 18px;
+}
+
+.TabContent{
+    background-color: #f9f5f5;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+.ListChapter{
+    display: block;
+}
+
+.ChapterSection{
+    padding: 10px;
+    background: #fff;
+    margin-bottom: 0;
+    box-shadow: 0 10px 10px rgba(0,0,0,.05);
+    z-index: 100;
+    height: 32px;
+    border-radius: 10px;
+}
+
+.ChapterSearch{
+    float: left;
+    width: 200px;
+    position: relative;
+}
+
+.SearchForm{
+    display: block;
+    margin-top: 0em;
+}
+
+.SearchForm #search{
+    height: 18px;
+    font-size: 13px;
+    padding-left: 60px;
+    box-shadow: none!important;
+    border-radius: 8px;
+    border: none!important;
+    background: #eee!important;
+    padding: 0.75em 2em;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    display: block;
+    width: 100%;
+}
+
+#searchButton{
+    left: 10px;
+    top: 12.5px;
+    bottom: 0;
+    line-height: 12px;
+    position: absolute;
+    font-size: 12px;
+}
+
+.SearchIcon{
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+.SearchForm label{
+    left: -9999px;
+}
+
+.ChapterListUL{
+    display: block;
+}
+
+.ChaptersUL{
+    margin: 0;
+    max-height: 490px;
+    overflow: auto;
+    display: block;
+    margin-block-start: 0.75em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 10px;
+}
+
+.ChapterItem{
+    background-color: rgb(241, 231, 218);
+    display: block;
+    width: 95%;
+    margin: 0 0 1px;
+    font-size: 15px;
+    list-style: none;
+    margin: 0;
+    padding-left: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.ChapterTitle{
+    color: #111;
+}
+
+.SideBar{
+    width: calc(33.33% - 20px);
+    float: right;
+    margin: 0 10px 40px 20px;
+}
+
+.BlockSideBar{
+    display: block;
+}
+
+.SideBarHeader{
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid blueviolet;
+    height: 27px;
+}
+
+.SideBarName{
+    font-size: 18px;
+    color: #111;
+}
+.SideBarContent{
+    display: block;
+    position: relative;
+    margin-top: 20px;
+}
+
+.GenreSideBar{
+    display: inline-block;
+    margin: 0 5px 5px 0;
+    color: #111!important;
+    padding: 0 10px;
+    min-width: 40px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 6px;
+    background: #eee;
+    font-weight: 400;
+    font-size: 13px;
+}

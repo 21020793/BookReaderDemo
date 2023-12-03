@@ -1,13 +1,147 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+header {
+  display: flex;
+  place-content: center;
+  background-color: rgb(88, 168, 88);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header h2 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: snow;
+  margin-left: 10px;
+}
+
+footer {
+  background-color: rgb(88, 168, 88);
+  display: grid;
+  place-content: center;
+}
+
+footer p {
+  font-family: 'Times New Roman', Times, serif;
+  color: azure;
+  font-size: 20px;
+}
+
+.Nav{
+  display: flex;
+  width: 100%;
+  background-color: #6f42c1;
+  color: white;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.searchForm {
+  width: 100%;
+  padding: 1rem 0 0 0.75rem;
+  
+}
+
+.searchForm input[type="text"] {
+  font-family: 'Open Sans', sans-serif;
+  width: 90%;
+  min-height: 48px;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  outline: none;
+}
+
+.searchForm label {
+  position: absolute;
+  left: -99999px;
+}
+
+.Nav ul {
+  color: #fff;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.Nav li {
+  padding: 0.7rem;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.Nav li:hover, 
+.Nav li:focus {
+  padding: 0.7rem;
+  border-radius: 4px;
+}
+
+.Nav li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.Nav li:hover, 
+.Nav li:focus, 
+.Nav li:hover a, 
+.Nav li:focus a  {
+  background-color: #eee;
+  color: #333;
+
+}
+
+.Nav li:hover a, 
+.Nav li:focus a {
+  cursor: pointer;
+}
+
+.FeedItems {
+  margin-top: 50px;
+}
+
+.HomeFeedContainer{
+  display: block;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.booksContainer {
+  margin: 20px 30px 20px 30px;
+  display: flex;
+  width: 100%;
+  padding: 20px 0 20px 0;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.newlyReleased{
+  display: flex;
+  margin-left: 50px;
+  margin-right: 50px;
+  justify-content: flex-start;
+  border-bottom: 2px solid yellowgreen;
+}
+
+.bookElement {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  width: 250px;
+  flex-direction: column;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.CoverH{
+  width: 144px;
+  height: 200px;
+  display: flex;
+  justify-content: center; 
+}
+
+.Title, .Chapters{
+  text-decoration: none;
+}
+
+a{
+  text-decoration: none;
 }
