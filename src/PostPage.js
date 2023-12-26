@@ -5,8 +5,8 @@ import Chapters from './Chapters'
 import './Postpage.css'
 const PostPage = ({ books, genres}) => {
 // we can dev another handleAddBook when clients add new book to their reading tracklist (and for reading history purposes)
-  const { id } = useParams();
-  const book = books.find(book => book.id.toString() === id);
+  const { title } = useParams();
+  const book = books.find(book => book.title.toString() === title);
 
   return (
     <main className='BookPage'>

@@ -16,14 +16,14 @@ const CarouselItem = ({ book }) => {
     }, [])
 
     const ReadMoreCSS = {
-        WebkitLineClamp: 8,
+        WebkitLineClamp: 7,
         WebkitBoxOrient: 'vertical',
         overflow: 'hidden',
         display: '-webkit-box'
     }
 
     return (
-        <article key={book.id}>
+        <article>
             <section className='HBwrapper'>
                 <section className='HBcontainer'>
                     <section className='HB-OuterLayer'>

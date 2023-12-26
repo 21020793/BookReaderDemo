@@ -1,6 +1,8 @@
 import React from 'react'
 import Feed from './Feed'
 import HeroBanner from './HeroBanner'
+import MainContents from './MainContents'
+import './MainContent.css'
 const Home = ({ books }) => {
 
   return (
@@ -14,6 +16,11 @@ const Home = ({ books }) => {
           </section>
           <section className='FeedItems'>
             <Feed
+              books={books}
+            />
+          </section>
+          <section className='MainItems'>
+            <MainContents
               books={books}
             />
           </section>

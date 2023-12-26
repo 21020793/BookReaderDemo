@@ -1,0 +1,208 @@
+
+.SearchWrapper{
+    padding-bottom: 70px;
+    min-height: calc(100vh - 434px);
+}
+
+.SContainer{
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 30px;
+}
+
+.mw-2col{
+    margin: 0 0 30px;
+}
+
+.SMainContent{
+    width: calc(66.66% - 20px);
+    float: left;
+    margin: 0 20px 40px 0;
+}
+
+.Category-area{
+    display: block;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.Cat-header{
+    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+    float:left;
+}
+
+.Cat-heading{
+    font-size: 24px!important;
+    line-height: 40px;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+    color: rgb(100, 164, 88);
+}
+
+.Cat-booklist{
+    display: block;
+}
+
+.Mls-wrap{
+    margin: 0 -7px;
+}
+
+.Cat-item{
+    float: left;
+    width: calc(50% - 14px);
+    padding: 0;
+    margin: 0 7px 40px;
+    position: relative;
+}
+
+.Cat-poster{
+    width: 140px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto;
+    padding-bottom: 200px;
+}
+
+.Poster-des{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.CatItem-details{
+    width: calc(100% - 160px);
+    float: right;
+    position: relative;
+    min-height: 200px;
+    padding-right: 10px;
+}
+
+.CatItem-name{
+    -webkit-line-clamp: 1;
+    font-size: 20px;
+    line-height: 1.4em;
+    margin: 0 0 10px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: #111;
+    text-decoration: none!important;
+    outline: 0;
+}
+.Genre-info{
+    margin-bottom: 15px;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 20.4px;
+}
+
+.Genre-CList{
+    font-size: 13px;
+    color: #7f7e99;
+    /*?inherited or not*/
+    display: flex;
+}
+
+.GenreCs{
+    font-size: 13px;
+    color: #111;
+    text-decoration: none!important;
+    outline: 0;
+}
+
+.GenreCs:not(:last-child)::after {
+    content: ',';
+    margin-right: 5px;
+    /* Adjust as needed */
+}
+
+.CatItem-Chapters{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-right: 10px;
+}
+
+.Chapter_CItem{
+    display: block;
+    padding-top: 7px;
+    padding-bottom: 3px;
+    border-bottom: 1px dashed #ddd;
+    font-size: .9em;
+    height: 25px;
+}
+
+.chapterN{
+    float: left;
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    color: #5f25a6;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.SMainSidebar{
+    width: calc(33.33% - 20px);
+    float: right;
+    margin: 0 0 40px 20px;
+}
+
+.SideBar-area{
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.Side-Header{
+    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+}
+
+.Side-Heading{
+    font-size: 24px!important;
+    line-height: 40px;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+    color: #5f25a6;
+}
+
+.Side-genres{
+    margin-bottom: 0!important;
+    position: relative;
+    padding: 0;
+}
+
+.Genres-Items{
+    display: inline-block!important;
+    float: left;
+    margin: 0 5px 5px 0;
+}
+
+.Genre-SideBar{
+    padding: 0 10px;
+    min-width: 40px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 6px;
+    background: #eee;
+    color: #111;
+    font-weight: 400;
+    font-size: 13px;
+    display: inline-block;
+}

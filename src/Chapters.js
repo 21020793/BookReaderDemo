@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-import { parse } from '@fortawesome/fontawesome-svg-core';
 
 const Chapters = ({ book, genres }) => {
   
@@ -41,7 +40,7 @@ const Chapters = ({ book, genres }) => {
                   <section className='ChapterListUL'>
                     <ul className='ChaptersUL'>
                       {book.available_chapters
-                        .filter(chapterSearch => chapterSearch.chapterID.toString().includes(search))
+                        .filter(chapterSearch => chapterSearch.chapter_title.toLowerCase().includes(search))
                         .map(chapter => (
                           <li className='ChapterItem' key={chapter.chapterID}>
                             <Link to={`book/read/${chapter.chapterID}`}>
@@ -63,8 +62,8 @@ const Chapters = ({ book, genres }) => {
               <section className='SideBarContent'>
                 {/*Link to a specific genre*/}
                 {genres.map(genre => (
-                  <Link>
-                    <p className='GenreSideBar'>{genre}</p>
+                  <Link key={genre.genreID}>
+                    <p className='GenreSideBar'>{genre.genre}</p>
                   </Link>
                 ))}
               </section>

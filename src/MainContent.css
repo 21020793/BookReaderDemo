@@ -1,0 +1,242 @@
+.HomeMWrapper {
+    padding-bottom: 70px;
+    min-height: 1200px;
+}
+
+.HomeMContainer {
+    max-width: 1400px;
+    width: 100%;
+    padding: 30px 20px 30px 60px;
+    height: 1200px;
+}
+
+.hw-2col {
+    margin: 0 0 30px;
+    height: 1200px;
+}
+
+.HomeContent-left {
+    width: calc(66.66% - 20px);
+    float: left;
+    margin: 0 20px 40px 0;
+}
+
+.Content-area {
+    display: block;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.hcm-content {
+    height: 1200px;
+
+}
+
+.hcm-wrap {
+    height: 1200px;
+}
+
+.hmc-header {
+    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+    float: left;
+    margin-left: 9px;
+}
+
+.hmc-heading {
+    float: left;
+    box-sizing: border-box;
+}
+
+.Header-label {
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+    color: #111;
+    border-bottom: 2px solid yellowgreen;
+}
+
+.HomeContent-right {
+    width: calc(33.33% - 20px);
+    float: right;
+    margin: 0 0 40px 20px;
+}
+
+.Most-viewed {
+    margin-bottom: 30px;
+}
+
+.mv-header {
+    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+    padding-left: 40px;
+    height: 41px;
+}
+
+.mv-heading {
+    float: left !important;
+    box-sizing: border-box;
+}
+
+.mv-heading .Header-label{
+    margin-bottom: 10px;
+}
+
+.mv-content,
+.mv-header::after,
+::before {
+    box-sizing: border-box;
+}
+
+.mv-contentBox {
+    background: 0 0;
+}
+
+.mv-tabContent {
+    padding: 0;
+}
+
+.mv-featureBox::after,
+::before {
+    box-sizing: border-box;
+}
+
+.mv-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.mv-itemLi {
+    overflow: unset;
+    padding-right: 60px;
+
+    padding: 15px 0 15px 80px;
+    background: 0 0 !important;
+    margin-bottom: 10px;
+    position: relative;
+    list-style: none;
+    margin: 0;
+
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.Ranking-num {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    right: 0;
+    top: 8px;
+    cursor: default;
+    background: #f5f5f5;
+}
+
+.mv-poster {
+    left: 0;
+    width: 60px;
+    top: calc(50%);
+    transform: translateY(-50%);
+    bottom: auto;
+    padding-bottom: 80px;
+    height: auto;
+    position: absolute;
+    overflow: hidden;
+}
+
+.mv-poster img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    vertical-align: middle;
+    border-style: none;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.mv-details {
+    font-size: 14px;
+    line-height: 1.4em;
+    display: block;
+}
+
+.mv-title {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4em;
+    margin-bottom: 5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.mv-info {
+    overflow: hidden;
+    font-size: .9em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    line-height: 1.4em;
+    display: block;
+}
+
+.fd-item {
+    overflow: hidden;
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #666;
+    display: inline-block;
+    margin: 3px 6px;
+}
+
+.fd-genres {
+    display: inline;
+}
+
+.fd-genre:not(:last-child)::after {
+    content: ',';
+    margin-right: 2px;
+}
+
+.fd-chapters {
+    display: block !important;
+}
+
+.fd-chapter {
+    display: inline-block;
+    margin-top: 2px;
+    margin-right: 15px;
+    color: #888;
+}
