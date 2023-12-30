@@ -10,7 +10,7 @@ const Feed = ({ API_URL }) => {
     useEffect(() => {
         const fetchItems = async () => {
             try {
-                const response = await fetch(`${API_URL}/feeds`);
+                const response = await fetch(`${API_URL}/home/feeds`);
                 if (!response.ok) throw new Error('No expected data received');
                 const books = await response.json();
                 setBooks(books);
@@ -20,9 +20,7 @@ const Feed = ({ API_URL }) => {
             }
         }
 
-        setTimeout(() => {
-            fetchItems();
-        }, 2000)
+        fetchItems();
     }, [])
 
 

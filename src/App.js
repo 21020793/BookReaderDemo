@@ -15,7 +15,7 @@ import apiRequest from './apiRequest';
 function App() {
 
 
-  const API_URL = '';
+  const API_URL = 'http://127.0.0.1:9800';
 
 
   const [genres, setGenres] = useState([
