@@ -7,8 +7,6 @@ import { Link } from 'react-router-dom';
 const Chapters = ({ book, genres }) => {
   
   const [search, setSearch] = useState('');
-  console.log(book.id);
-
 
   return (
     <article className='ChapterWrapper'>
@@ -43,7 +41,7 @@ const Chapters = ({ book, genres }) => {
                         .filter(chapterSearch => chapterSearch.chapter_title.toLowerCase().includes(search))
                         .map(chapter => (
                           <li className='ChapterItem' key={chapter.chapterID}>
-                            <Link to={`book/read/${chapter.chapterID}`}>
+                            <Link to={`book/${book.title}/${chapter.chapterID}`}>
                               <p className='ChapterTitle'>Chapter {chapter.chapterID}: {chapter.chapter_title}</p>
                             </Link> {/*Link to reading Site*/}
                           </li>

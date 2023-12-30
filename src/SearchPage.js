@@ -3,11 +3,10 @@ import { useLocation, Link } from 'react-router-dom';
 import BookItem_h from './BookItem_h';
 import './SearchPage.css';
 
-const SearchPage = ({ genres }) => {
+const SearchPage = ({API_URL, genres }) => {
 
   const location = useLocation();
   const heading = location.state.query;
-  const API_URL = '';
   const [books, setBooks] = useState([]);
   const [fetchError, setFetchError] = useState(null)
 
@@ -15,7 +14,7 @@ const SearchPage = ({ genres }) => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await fetch(`${API_URL}/${heading}`)
+        const response = await fetch(`${API_URL}/search?query=${heading}`)
         if (!response.ok) throw new Error("Could not find the search results")
         const listItems = await response.json();
         setBooks(listItems);
@@ -25,6 +24,10 @@ const SearchPage = ({ genres }) => {
         setFetchError(error.message);
       }
     }
+
+    setTimeout(() => {
+      fetchItems();
+    }, 2000)
   }, []);
 
   return (

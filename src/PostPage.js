@@ -1,12 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams, Link } from "react-router-dom"
 import AniDetails from './AniDetails'
 import Chapters from './Chapters'
 import './Postpage.css'
-const PostPage = ({ books, genres}) => {
-// we can dev another handleAddBook when clients add new book to their reading tracklist (and for reading history purposes)
+import apiRequest from './apiRequest'
+
+const PostPage = ({ API_URL, genres }) => {
+
   const { title } = useParams();
-  const book = books.find(book => book.title.toString() === title);
+  const [book, setBook] = useState([]);
+  const [fetchError, setFetchError] = useState(null);
+
+  useEffect(() => {
+    const fetchItems = async () => {
+      try {
+        const getOptions = { method: 'GET' };
+        const templatedData = `${API_URL}/book/${title}`;
+        const response = await apiRequest(templatedData, getOptions);
+        if (!response.ok) throw new Error('No expected data received');
+        const Book = await response.json();
+        setBook(Book);
+        setFetchError(null);
+      } catch (error) {
+        setFetchError(error.message);
+      }
+    }
+
+    setTimeout(() => {
+      fetchItems();
+    }, 2000)
+  }, [])
 
   return (
     <main className='BookPage'>

@@ -16,6 +16,8 @@ function App() {
 
 
   const API_URL = '';
+
+
   const [genres, setGenres] = useState([
     {
       genreID: 1,
@@ -35,7 +37,7 @@ function App() {
     },
     {
       genreID: 5,
-      genre:'Fantasy'
+      genre: 'Fantasy'
     },
     {
       genreID: 6,
@@ -47,7 +49,7 @@ function App() {
     },
     {
       genreID: 8,
-      genre:'Mystery'
+      genre: 'Mystery'
     },
     {
       genreID: 9,
@@ -59,7 +61,7 @@ function App() {
     },
     {
       genreID: 11,
-      genre:  'Sci-Fi'
+      genre: 'Sci-Fi'
     },
     {
       genreID: 12,
@@ -71,7 +73,7 @@ function App() {
     }
   ]);
   const [fetchError, setFetchError] = useState(null)
-  
+
   const [books, setBooks] = useState([
     {
       id: 1,
@@ -139,7 +141,7 @@ function App() {
       author: 'Hajime Isayama',
       icons: '/images/img3.jpg',
       body: `Hundreds of years ago, horrifying creatures which resembled humans appeared. These mindless, towering giants, called "titans," proved to be an existential threat, as they preyed on whatever humans they could find in order to satisfy a seemingly unending appetite. Unable to effectively combat the titans, mankind was forced to barricade themselves within large walls surrounding what may very well be humanity's last safe haven in the world. In the present day, life within the walls has finally found peace, since the residents have not dealt with titans for many years. Eren Yeager, Mikasa Ackerman, and Armin Arlert are three young children who dream of experiencing all that the world has to offer, having grown up hearing stories of the wonders beyond the walls. But when the state of tranquility is suddenly shattered by the attack of a massive 60-meter titan, they quickly learn just how cruel the world can be. On that day, Eren makes a promise to himself that he will do whatever it takes to eradicate every single titan off the face of the Earth, with the hope that one day, humanity will once again be able to live outside the walls without fear.`
-      
+
     },
     {
       id: 2,
@@ -408,7 +410,7 @@ function App() {
       author: 'Hajime Isayama',
       icons: '/images/img3.jpg',
       body: `Hundreds of years ago, horrifying creatures which resembled humans appeared. These mindless, towering giants, called "titans," proved to be an existential threat, as they preyed on whatever humans they could find in order to satisfy a seemingly unending appetite. Unable to effectively combat the titans, mankind was forced to barricade themselves within large walls surrounding what may very well be humanity's last safe haven in the world. In the present day, life within the walls has finally found peace, since the residents have not dealt with titans for many years. Eren Yeager, Mikasa Ackerman, and Armin Arlert are three young children who dream of experiencing all that the world has to offer, having grown up hearing stories of the wonders beyond the walls. But when the state of tranquility is suddenly shattered by the attack of a massive 60-meter titan, they quickly learn just how cruel the world can be. On that day, Eren makes a promise to himself that he will do whatever it takes to eradicate every single titan off the face of the Earth, with the hope that one day, humanity will once again be able to live outside the walls without fear.`
-      
+
     },
     {
       id: 6,
@@ -444,7 +446,7 @@ function App() {
       author: 'Hajime Isayama',
       icons: '/images/img3.jpg',
       body: `Hundreds of years ago, horrifying creatures which resembled humans appeared. These mindless, towering giants, called "titans," proved to be an existential threat, as they preyed on whatever humans they could find in order to satisfy a seemingly unending appetite. Unable to effectively combat the titans, mankind was forced to barricade themselves within large walls surrounding what may very well be humanity's last safe haven in the world. In the present day, life within the walls has finally found peace, since the residents have not dealt with titans for many years. Eren Yeager, Mikasa Ackerman, and Armin Arlert are three young children who dream of experiencing all that the world has to offer, having grown up hearing stories of the wonders beyond the walls. But when the state of tranquility is suddenly shattered by the attack of a massive 60-meter titan, they quickly learn just how cruel the world can be. On that day, Eren makes a promise to himself that he will do whatever it takes to eradicate every single titan off the face of the Earth, with the hope that one day, humanity will once again be able to live outside the walls without fear.`
-      
+
     }
   ])
 
@@ -461,22 +463,22 @@ function App() {
   //     }
   //   }
   // })
-  
+
   return (
     <div className='App'>
       <Nav />
       <Routes>
         <Route exact path="/"
-          element={<Home books={books} />}>
+          element={<Home API_URL={API_URL} />}>
         </Route>
         <Route exact path="/book"
           element={<NewPost />}>
         </Route>
         <Route exact path="/search"
-          element={<SearchPage genres = {genres}/>}>
+          element={<SearchPage API_URL={API_URL} genres={genres} />}>
         </Route>
         <Route exact path="/book/:title"
-          element={<PostPage books={books} genres = {genres}/>}>
+          element={<PostPage API_URL={API_URL} genres={genres} />}>
         </Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="*" element={<Missing />}></Route>

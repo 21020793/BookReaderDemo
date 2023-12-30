@@ -7,7 +7,7 @@ const BookItem_h = ({ book }) => {
   return (
     <section className='Cat-item' key={book.id}>
       <div className='Cat-poster'>
-        <Link>
+        <Link to={`/book/${book.title}`}>
           <img className='Poster-des' src={book.icons} alt="" />
         </Link>
       </div>
@@ -24,7 +24,7 @@ const BookItem_h = ({ book }) => {
           {book.available_chapters.sort((a, b) => b.chapterID - a.chapterID).slice(0, 3).map(chapter => (
             <div className='Chapter_CItem'>
               <div className='Chapter-prop'>
-                  <Link><a className='chapterN'>{`Chapter ${chapter.chapterID}`}</a></Link>
+                  <Link to={`/book/${book.title}/${chapter.chapterID}`}><a className='chapterN'>{`Chapter ${chapter.chapterID}`}</a></Link>
               </div>
             </div>
           ))}

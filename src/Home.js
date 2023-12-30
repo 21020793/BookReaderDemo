@@ -3,31 +3,27 @@ import Feed from './Feed'
 import HeroBanner from './HeroBanner'
 import MainContents from './MainContents'
 import './MainContent.css'
-const Home = ({ books }) => {
+const Home = ({ API_URL }) => {
 
   return (
     <main className='Home'>
-      {books.length ? (
-        <main>
-          <section className='HBItems'>
-            <HeroBanner
-              books={books}
-            />
-          </section>
-          <section className='FeedItems'>
-            <Feed
-              books={books}
-            />
-          </section>
-          <section className='MainItems'>
-            <MainContents
-              books={books}
-            />
-          </section>
-        </main>
-      ) : (
-        <p style={{ marginTop: "2rem" }}>No books to display.</p>
-      )}
+      <main>
+        <section className='HBItems'>
+          <HeroBanner
+            API_URL={API_URL}
+          />
+        </section>
+        <section className='FeedItems'>
+          <Feed
+            API_URL={API_URL}
+          />
+        </section>
+        <section className='MainItems'>
+          <MainContents
+            API_URL={API_URL}
+          />
+        </section>
+      </main>
     </main>
   )
 }
