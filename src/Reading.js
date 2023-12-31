@@ -18,9 +18,7 @@ const Reading = ({ API_URL }) => {
         const fetchItems = async () => {
             try {
                 const response = await fetch(`${API_URL}/book/${title}/${chapterIDs}`);
-                console.log(response);
                 const Clist = await fetch(`${API_URL}/book${title}`);
-                console.log(Clist);
                 if (!response.ok || !Clist.ok) throw new Error("Could not find the search results")
                 const listItems = await response.json();
                 const listChapters = await Clist.json();
