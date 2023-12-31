@@ -72,10 +72,10 @@ function MainContents({ API_URL }) {
                             </div>
                             <div className="mv-details">
                               <h3 className="mv-title">
-                                <Link>{book.title}</Link>
+                                <Link to={`/book/${book.title}`}>{book.title}</Link>
                               </h3>
                               <div className="mv-info">
-                                <span className="fd-item">EN/VIE</span>
+                                <span className="fd-item">EN/VIE |</span>
                                 <span className="dot"></span>
                                 <span className="fd-genres">
                                   {book.genres.slice(0, 2).map((genre, index) => (

@@ -39,7 +39,7 @@ const Nav = () => {
         <Link to='/'><img src="/images/logo.png" id='logo' /></Link>
         <section id='Header_menu'>
           <ul className='Header_menu-list'>
-            <li className='NavItem'><Link to='/books'><p>Books</p></Link></li>
+            <li className='NavItem'><Link to='/book/hello'><p>Books</p></Link></li>
             <li className='NavItem'><Link to='/about'><p>About</p></Link></li>
             <li className='NavItem'>
               <button className='TypeExpand' onClick={() => setIsOpen(!isOpen)}>Types</button>

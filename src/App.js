@@ -11,7 +11,7 @@ import About from './About';
 import Missing from './Missing';
 import SearchPage from './SearchPage';
 import apiRequest from './apiRequest';
-
+import Reading from './Reading';
 function App() {
 
 
@@ -479,6 +479,9 @@ function App() {
         </Route>
         <Route exact path="/book/:title"
           element={<PostPage API_URL={API_URL} genres={genres} />}>
+        </Route>
+        <Route exact path="/book/:title/:chapterID"
+          element={<Reading API_URL={API_URL}/>}>
         </Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="*" element={<Missing />}></Route>
