@@ -34,32 +34,44 @@ const Nav = () => {
   }
 
   return (
-    <div className='Header'>
-      <section className='HContainer'>
-        <Link to='/'><img src="/images/logo.png" id='logo' /></Link>
-        <section id='Header_menu'>
-          <ul className='Header_menu-list'>
-            <li className='NavItem'><Link to='/book/hello'><p>Books</p></Link></li>
-            <li className='NavItem'><Link to='/about'><p>About</p></Link></li>
-            <li className='NavItem'>
-              <button className='TypeExpand' onClick={() => setIsOpen(!isOpen)}>Types</button>
-              <FontAwesomeIcon icon={faChevronDown} className='DropdownIcon' />
-              {isOpen &&
-                <section className='DropdownT'>
-                  <section className='DropdownTypes'>
+    <div className="Header">
+      <section className="HContainer">
+        <Link to="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+          <img src="/images/logo.png" id="logo" />
+        </Link>
+        <section id="Header_menu">
+          <ul className="Header_menu-list">
+            <li className="NavItem">
+              <Link to="/book/hello">
+                <p>Books</p>
+              </Link>
+            </li>
+            <li className="NavItem">
+              <Link to="/about">
+                <p>About</p>
+              </Link>
+            </li>
+            <li className="NavItem">
+              <button className="TypeExpand" onClick={() => setIsOpen(!isOpen)}>
+                Types
+              </button>
+              <FontAwesomeIcon icon={faChevronDown} className="DropdownIcon" />
+              {isOpen && (
+                <section className="DropdownT">
+                  <section className="DropdownTypes">
                     <li>Novel</li>
                     <li>Self Help</li>
                     <li>Business</li>
                     <li>Manga</li>
                   </section>
-                </section>}
+                </section>
+              )}
             </li>
-
           </ul>
         </section>
-        <section id='Header_MenuRight'>
-          <div id='SearchBar'>
-            <div className='SearchContent'>
+        <section id="Header_MenuRight">
+          <div id="SearchBar">
+            <div className="SearchContent">
               <form onSubmit={handleSearchEvent}>
                 <input
                   type="text"
@@ -68,18 +80,19 @@ const Nav = () => {
                   placeholder="Search book..."
                   onChange={onSearchChange}
                 ></input>
-                <button
-                  type="submit"
-                  className="search-icon">
-                  <FontAwesomeIcon className='SearchIconNav' icon={faMagnifyingGlass}
-                  /></button>
+                <button type="submit" className="search-icon">
+                  <FontAwesomeIcon
+                    className="SearchIconNav"
+                    icon={faMagnifyingGlass}
+                  />
+                </button>
               </form>
             </div>
           </div>
         </section>
       </section>
     </div>
-  )
+  );
 }
 
 export default Nav
