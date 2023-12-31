@@ -480,7 +480,7 @@ function App() {
         <Route exact path="/book/:title"
           element={<PostPage API_URL={API_URL} genres={genres} />}>
         </Route>
-        <Route exact path="/book/:title/:chapterID"
+        <Route exact path="/book/:title/:chapterIDs"
           element={<Reading API_URL={API_URL}/>}>
         </Route>
         <Route path="/about" element={<About />}></Route>

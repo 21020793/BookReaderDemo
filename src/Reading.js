@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faList, faArrowLeft, faArrowRight, faHouse } from '@fortawesome/free-solid-svg-icons';
 import './Reading.css';
-import { useEffect, useState, useParams } from 'react';
+import { useEffect, useState} from 'react';
 const Reading = ({ API_URL }) => {
 
     const { title, chapterIDs } = useParams();
@@ -18,7 +18,9 @@ const Reading = ({ API_URL }) => {
         const fetchItems = async () => {
             try {
                 const response = await fetch(`${API_URL}/book/${title}/${chapterIDs}`);
-                const Clist = await fetch(`${API_URL}/book/${title}`);
+                console.log(response);
+                const Clist = await fetch(`${API_URL}/book${title}`);
+                console.log(Clist);
                 if (!response.ok || !Clist.ok) throw new Error("Could not find the search results")
                 const listItems = await response.json();
                 const listChapters = await Clist.json();
