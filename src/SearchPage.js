@@ -43,11 +43,11 @@ const SearchPage = ({ API_URL, genres }) => {
                 </div>
                 <section className='Cat-bookList'>
                   <div className='Mls-wrap'>
-                    {books.map(book => {
+                    {books.map(book => (
                       <BookItem_h
                         book={book}
                       />
-                    })}
+                    ))}
                   </div>
                 </section>
               </section>
