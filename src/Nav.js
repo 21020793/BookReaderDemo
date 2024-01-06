@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { useAuth } from './Auth';
 
 const Nav = () => {
 
@@ -11,7 +12,8 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [search, setSearch] = useSearchParams();
   const [searchText, setSearchText] = useState('');
-  
+  const auth = useAuth();
+
   const onSearchChange = (e) => {
     const text = e.target.value;
     if (text.length === 0) {
@@ -36,15 +38,21 @@ const Nav = () => {
   return (
     <div className="Header">
       <section className="HContainer">
-        <Link to="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        <Link to="/">
           <img src="/images/logo.png" id="logo" />
         </Link>
         <section id="Header_menu">
           <ul className="Header_menu-list">
             <li className="NavItem">
-              <Link to="/book/hello">
-                <p>Books</p>
-              </Link>
+              {!auth.user ? (
+                <Link to="/login_signup">
+                  <p>Login</p>
+                </Link>
+              ) :
+                <Link to="/profile">
+                  <p>Profile</p>
+                </Link>
+              }
             </li>
             <li className="NavItem">
               <Link to="/about">

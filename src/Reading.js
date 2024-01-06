@@ -14,6 +14,7 @@ const Reading = ({ API_URL }) => {
     const [loading, setLoading] = useState(true);
     const [isOpen, setIsOpen] = useState(false);
     const CurrentChapter = parseInt(chapterIDs, 10);
+
     useEffect(() => {
         const fetchItems = async () => {
             try {

@@ -1,0 +1,36 @@
+.Login_Container {
+    background-image: url(https://www.wallpaperup.com/uploads/wallpapers/2016/03/30/918988/d29264bc683df42ae189a351116ce0da.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Raleway', sans-serif;
+    height: 100vh;
+}
+
+.center-div {
+    padding-top: 5%;
+}
+
+.btn-primary {
+    background-color: rgb(99, 238, 166);
+    border-color: antiquewhite;
+    padding: .4em 2em;
+    border-radius: 15px;
+    transition: transform 0.5s;
+}
+
+input[type="email"] {
+    background-color: aliceblue;
+}
+
+input[type="password"] {
+    background-color: aliceblue;
+}
+
+.btn-primary:hover {
+    background-color: rgb(99, 238, 166);
+    transform: translateY(-3px);
+    border-color: antiquewhite;
+}
+.SwitchButton{
+    cursor: pointer;
+}
