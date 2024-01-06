@@ -55,7 +55,7 @@ const Reading = ({ API_URL }) => {
                         <section id='RChapter_list'>
                             <div className='Toggle_body'>
                                 <header className='rd_sidebar-header'>
-                                    <Link to={`/book/${title}`}><h3 className='rd_sidebar-name'></h3>{title}</Link>
+                                    <Link to={`/book/${title}`}><h3 className='rd_sidebar-name'>{title}</h3></Link>
                                 </header>
                                 <div className='Sub_list'>
                                     <ul id='Chapter_UList'>

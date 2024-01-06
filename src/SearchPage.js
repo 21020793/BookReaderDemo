@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import BookItem_h from './BookItem_h';
 import './SearchPage.css';
 
@@ -10,6 +11,7 @@ const SearchPage = ({ API_URL, genres }) => {
   const [books, setBooks] = useState([]);
   const [fetchError, setFetchError] = useState(null)
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchItems = async () => {
@@ -30,6 +32,11 @@ const SearchPage = ({ API_URL, genres }) => {
       fetchItems();
     }, 2000)
   }, []);
+
+
+  const handleGenre = (genre) =>{
+    navigate(`/search?query=${genre}`, { state: { query: genre } });
+  }
 
   return (
     <div className='SearchWrapper'>
@@ -60,11 +67,11 @@ const SearchPage = ({ API_URL, genres }) => {
                 <div className='Side-genres'>
                   <div className='Genres-wrapper'>
                     {genres.map(genre => (
-                      <Link key={genre.genreID}>
+                      <button onClick={handleGenre(genre.genre)} key={genre.genreID}>
                         <div className='Genres-Items'>
                           <p className='Genre-SideBar'>{genre.genre}</p>
                         </div>
-                      </Link>
+                      </button>
                     ))}
                   </div>
                 </div>
