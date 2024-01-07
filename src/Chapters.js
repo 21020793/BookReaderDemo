@@ -28,7 +28,7 @@ const Chapters = ({ book, genres }) => {
                         <input
                           id="search"
                           type="text"
-                          placeholder='Chapter Number'
+                          placeholder='Chapter Name'
                           role="searchbox"
                           value={search}
                           onChange={(e) => setSearch(e.target.value)} />

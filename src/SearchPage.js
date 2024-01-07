@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from 'react'
-import { useLocation, Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import BookItem_h from './BookItem_h';
 import './SearchPage.css';
 
 const SearchPage = ({ API_URL, genres }) => {
 
   const location = useLocation();
-  const heading = location.state.query;
+  const heading = location.state.query || '';
   const [books, setBooks] = useState([]);
   const [fetchError, setFetchError] = useState(null)
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchItems = async () => {
@@ -31,12 +29,8 @@ const SearchPage = ({ API_URL, genres }) => {
     setTimeout(() => {
       fetchItems();
     }, 2000)
-  }, []);
+  }, [heading]);
 
-
-  const handleGenre = (genre) =>{
-    navigate(`/search?query=${genre}`, { state: { query: genre } });
-  }
 
   return (
     <div className='SearchWrapper'>
@@ -51,7 +45,7 @@ const SearchPage = ({ API_URL, genres }) => {
                 <section className='Cat-bookList'>
                   <div className='Mls-wrap'>
                     {books.map(book => (
-                      <BookItem_h
+                      <BookItem_h key={book.id}
                         book={book}
                       />
                     ))}
@@ -67,7 +61,7 @@ const SearchPage = ({ API_URL, genres }) => {
                 <div className='Side-genres'>
                   <div className='Genres-wrapper'>
                     {genres.map(genre => (
-                      <button onClick={handleGenre(genre.genre)} key={genre.genreID}>
+                      <button key={genre.genreID}>
                         <div className='Genres-Items'>
                           <p className='Genre-SideBar'>{genre.genre}</p>
                         </div>

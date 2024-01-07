@@ -12,7 +12,7 @@
 
 .hw-2col {
     margin: 0 0 30px;
-    height: 1200px;
+    height: 1060px;
 }
 
 .HomeContent-left {
@@ -196,6 +196,7 @@ h3 {
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    color:#111;
 }
 
 .mv-info {

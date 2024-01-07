@@ -29,7 +29,7 @@ const BookItem_h = ({ book }) => {
               <div key={chapter.chapterID} className="Chapter_CItem">
                 <div className="Chapter-prop">
                   <Link to={`/book/${book.title}/${chapter.chapterID}`}>
-                    <a className="chapterN">{`Chapter ${chapter.chapterID}`}</a>
+                    <div className="chapterN">{`Chapter ${chapter.chapterID}`}</div>
                   </Link>
                 </div>
               </div>

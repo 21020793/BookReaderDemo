@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useSearchParams, useNavigate } from 'react-router-dom'
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';

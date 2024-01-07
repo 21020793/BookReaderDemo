@@ -1,4 +1,4 @@
-import Header from './Header';
+
 import Footer from './Footer';
 import './index.css';
 import { useState, useEffect } from 'react';
@@ -11,7 +11,6 @@ import PostPage from './PostPage';
 import About from './About';
 import Missing from './Missing';
 import SearchPage from './SearchPage';
-import apiRequest from './apiRequest';
 import Reading from './Reading';
 import Login from './Login';
 import Profile from './Profile';
@@ -19,7 +18,6 @@ function App() {
 
 
   const API_URL = 'http://127.0.0.1:9800';
-
 
   const [genres, setGenres] = useState([
     {
@@ -104,6 +102,7 @@ function App() {
         <Route path="/about" element={<About />}></Route>
         <Route path="*" element={<Missing />}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
     </AuthProvider>
   );

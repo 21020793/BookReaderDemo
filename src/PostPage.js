@@ -27,7 +27,7 @@ const PostPage = ({ API_URL, genres }) => {
 
     setTimeout(() => {
       fetchItems();
-    }, 2000);
+    }, 100);
   }, []);
 
   return (

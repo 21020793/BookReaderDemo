@@ -296,7 +296,7 @@ h2 {
 
 #searchButton{
     left: 10px;
-    top: 12.5px;
+    top: 7px;
     bottom: 0;
     line-height: 12px;
     position: absolute;
@@ -345,6 +345,8 @@ h2 {
 
 .ChapterTitle{
     color: #111;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .SideBar{

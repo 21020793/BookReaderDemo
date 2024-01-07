@@ -27,7 +27,7 @@ function MainContents({ API_URL }) {
 
     setTimeout(() => {
       fetchItems();
-    }, 2000);
+    }, 100);
   }, []);
 
   return (
@@ -62,20 +62,22 @@ function MainContents({ API_URL }) {
                   <div className="mv-tabContent">
                     <div className="mv-featureBox">
                       <ul className="mv-list">
-                        {MV.map((book) => (
+                        {MV.map((book, index) => (
                           <li className="mv-itemLi" key={book.id}>
                             <div className="Ranking-num">
-                              <span>01</span>
+                              <span>{index + 1}</span>
                             </div>
                             <div className="mv-poster">
-                              <img src={book.icons} alt="" />
+                              <Link to={`/book/${book.title}`}>
+                                <img src={book.icons} alt="" />
+                              </Link>
                             </div>
                             <div className="mv-details">
                               <h3 className="mv-title">
                                 <Link to={`/book/${book.title}`}>{book.title}</Link>
                               </h3>
                               <div className="mv-info">
-                                <span className="fd-item">EN/VIE |</span>
+                                <span className="fd-item">EN/VIE </span>
                                 <span className="dot"></span>
                                 <span className="fd-genres">
                                   {book.genres.slice(0, 2).map((genre, index) => (
@@ -85,11 +87,10 @@ function MainContents({ API_URL }) {
                               </div>
                               <div className="fd-chapters">
                                 <span className="fd-chapter">
-                                  <a className="">{`Chapter ${
-                                    book.available_chapters
-                                      .slice()
-                                      .sort((a, b) => b.id - a.id)[0].chapterID
-                                  }`}</a>
+                                  <a className="">{`Chapter ${book.available_chapters
+                                    .slice()
+                                    .sort((a, b) => b.id - a.id)[0].chapterID
+                                    }`}</a>
                                 </span>
                               </div>
                             </div>

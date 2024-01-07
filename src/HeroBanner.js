@@ -24,13 +24,13 @@ const HeroBanner = ({ API_URL }) => {
 
         setTimeout(() => {
             fetchItems();
-        }, 2000)
+        }, 100)
     }, [])
 
     return (
         <Carousel itemsToShow={1}>
             {books.map(book => (
-                <Link to={`/book/${book.id}`} key={book.id}>
+                <Link to={`/book/${book.title}`} key={book.id}>
                     <CarouselItem
                         book={book}
                     />

@@ -1,24 +1,26 @@
 import React from 'react';
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate} from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faList, faArrowLeft, faArrowRight, faHouse } from '@fortawesome/free-solid-svg-icons';
 import './Reading.css';
-import { useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 const Reading = ({ API_URL }) => {
 
     const { title, chapterIDs } = useParams();
-    
+
     const [Chapters, setChapters] = useState([]);
     const [fetchError, setFetchError] = useState(null);
     const [chapterList, setChapterList] = useState([]);
     const [loading, setLoading] = useState(true);
     const [isOpen, setIsOpen] = useState(false);
     const CurrentChapter = parseInt(chapterIDs, 10);
+    const navigate = useNavigate();
+
 
     useEffect(() => {
         const fetchItems = async () => {
             try {
-                const response = await fetch(`${API_URL}/book/${title}/${chapterIDs}`);
+                const response = await fetch(`${API_URL}/book/${title}/${CurrentChapter}`);
                 const Clist = await fetch(`${API_URL}/book${title}`);
                 if (!response.ok || !Clist.ok) throw new Error("Could not find the search results")
                 const listItems = await response.json();
@@ -35,21 +37,33 @@ const Reading = ({ API_URL }) => {
 
         setTimeout(() => {
             fetchItems();
-        }, 2000)
-    }, []);
+        }, 100)
+    }, [chapterIDs]);
 
-    const handleClick = () => {
-        setIsOpen(!isOpen);
-    }
+    const handleNextChapter = (e) => {
+        const nextChapterID = parseInt(chapterIDs, 10) + 1;
+        navigate(`/book/${title}/${nextChapterID}`);
+    };
+
+    const handlePrevChapter = (e) => {
+        const nextChapterID = parseInt(chapterIDs, 10) - 1;
+        navigate(`/book/${title}/${nextChapterID}`);
+    };
+
+
     return (
         <div>
             {!fetchError && !loading &&
                 <div id='MainPart'>
                     <section id='rd-side_icon'>
-                        <div className='Previous'><Link to={`/book/${title}/${CurrentChapter - 1}`}><FontAwesomeIcon icon={faArrowLeft} className='faLeft_arrow' /></Link></div>
+                        <div className='Previous' onClick={handlePrevChapter}>
+                            <FontAwesomeIcon icon={faArrowLeft} className='faLeft_arrow' />
+                        </div>
                         <div className='Return_Home'><Link to={'/'}><FontAwesomeIcon icon={faHouse} className='HouseIcon' /></Link></div>
-                        <div className='List_Info'><button onClick={handleClick}><FontAwesomeIcon icon={faList} className='List_Icon' /></button></div>
-                        <div className='NextB'><Link to={`/book/${title}/${CurrentChapter + 1}`}><FontAwesomeIcon icon={faArrowRight} className='faRight_arrow' /></Link></div>
+                        <div className='NextB' onClick={handleNextChapter}>
+                            <FontAwesomeIcon icon={faArrowRight} className='faRight_arrow' />
+                        </div>
+
                     </section>
                     {isOpen && (
                         <section id='RChapter_list'>
@@ -85,7 +99,7 @@ const Reading = ({ API_URL }) => {
                         </div>
                     </div>
                 </div>
-                }
+            }
         </div>
     )
 }
